@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bai1.css">
+</head>
+<style>
+    .box{
+        width: 100%;
+        height: 100%;
+    }
+    .box1{
+        width: 1000px;
+        height: 2000px;
+        border: 2px solid rgb(214, 20, 20);
+        position: relative;
+    }
+    .box2{
+        width: 400px;
+        height: 100px;
+        border: 2px solid rgba(109, 23, 23, 0.411);
+        position: fixed;
+        top: 10px;
+    }
+    .box3{
+        width: 400px;
+        height: 100px;
+        border: 2px solid rgb(214, 81, 20);
+        position: fixed;
+        bottom: 0;
+    }
+    .box4{
+        width: 900px;
+        height: 400px;
+        border: 2px solid rgb(20, 136, 214);
+        position:relative;
+        top: 110px;
+    }
+    .box5{
+        width: 500px;
+        height: 200px;
+        border: 2px solid rgb(207, 20, 214);
+        position:sticky;
+        top: 220px;
+        position: -webkit-sticky;
+        margin: 100px auto;
+    }
+    .box6{
+        width: 150px;
+        height: 100px;
+        border: 2px solid rgb(245, 241, 25);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    @media (max-width: 780px) {
+        .box1{
+            width:calc(1000px/2);
+        }
+        .box2,.box3{
+            width:calc(400px/2);
+        }
+        .box4{
+            width:calc(900px/2);
+        }
+        .box5{
+            width:calc(500px/2);
+        }
+        .box6{
+            width:calc(150px/2);
+        }
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="box4">
+                <div class="box5">
+                </div>
+                <div class="box6"></div>    
+            </div>
+        </div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        
+    </div>
+
+</body>
+</html>

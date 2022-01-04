@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lv1.3.css">
+</head>
+<body>
+
+    <div class="form">
+        <input type="text" class="text1" placeholder="width">
+        <input type="text" class="text2" placeholder="height">
+        <input type="text" class="text3" placeholder="margin">
+        <input type="text" class="text4" placeholder="padding">
+    </div>
+    <h1>khi dùng thẻ li</h1>
+    <ul class="box1">
+        <li class="le">A1</li>
+        <li class="chan">A2</li>
+        <li class="le">A3</li>
+        <li class="chan">A4</li>
+        <li class="le">A5</li>
+        <li class="chan">A6</li>
+        <li class="le">A7</li>
+        <li class="chan">A8</li>
+        <li class="le">A9</li>
+        <li class="chan">A10</li>
+        <li class="le">A11</li>
+        <li class="chan">A12</li>
+    </ul>
+    <h1>khi dùng thẻ span</h1>
+        <p class="box2">
+            <span class="le">A1</span>
+            <span class="chan">A2</span>
+            <span class="le">A3</span>
+            <span class="chan">A4</span>
+            <span class="le">A5</span>
+            <span class="chan">A6</span>
+            <span class="le">A7</span>
+            <span class="chan">A8</span>
+            <span class="le">A9</span>
+            <span class="chan">A10</span>
+            <span class="le">A11</span>
+            <span class="chan">A12</span>
+        </p>
+
+
+        <script>
+            const text1 = document.querySelector('.text1');
+            const text2 = document.querySelector('.text2');
+            const text3 = document.querySelector('.text3');
+            const text4 = document.querySelector('.text4');
+            
+            let liElemnts = document.querySelectorAll('ul li');
+            let spanElemnts = document.querySelectorAll('p span');
+            text1.oninput = function(e){
+                let inputWidth;
+                inputWidth = e.target.value;
+                if(!isNaN(inputWidth)){
+                    for(let liElemnt of liElemnts){
+                        liElemnt.style.width = inputWidth + 'px';
+                    }
+                    for(let spanElemnt of spanElemnts){
+                        spanElemnt.style.width = inputWidth + 'px';
+                    }
+                }else{
+                    console.log('sai');
+                }
+            }
+            text2.oninput = function(e){
+                let inputHeight;
+                inputHeight = e.target.value;
+                if(!isNaN(inputHeight)){
+                    for(let liElemnt of liElemnts){
+                        liElemnt.style.height = inputHeight + 'px';
+                    }
+                    for(let spanElemnt of spanElemnts){
+                        spanElemnt.style.height = inputHeight + 'px';
+                    }
+                }else{
+                    console.log('sai');
+                }
+            }
+            text3.oninput = function(e){
+                let inputMargin;
+                inputMargin = e.target.value;
+                if(!isNaN(inputMargin)){
+                    for(let liElemnt of liElemnts){
+                        liElemnt.style.margin = inputMargin + 'px';
+                    }
+                    for(let spanElemnt of spanElemnts){
+                        spanElemnt.style.margin = inputMargin + 'px';
+                    }
+                }else{
+                    console.log('sai');
+                }
+            }
+            text4.oninput = function(e){
+                let inputPadding;
+                inputPadding = e.target.value;
+                if(!isNaN(inputPadding)){
+                    for(let liElemnt of liElemnts){
+                        liElemnt.style.padding = inputPadding + 'px';
+                    }
+                    for(let spanElemnt of spanElemnts){
+                        spanElemnt.style.padding = inputPadding + 'px';
+                    }
+                }else{
+                    console.log('sai');
+                }
+            }
+            
+        </script>
+        <!-- 1 sk oninput khi input sẽ lấy ra cả 4 cái text rồi duyệt qua nếu gõ vào input nào thì sẽ hiện ra biến tương ứng -->
+</body>
+</html>
